@@ -17,10 +17,10 @@ model = YOLO('yolov8s.pt')
 tracker = DeepSort(max_age=60, n_init=3, max_cosine_distance=0.3)
 
 st.set_page_config(layout="wide")
-st.title("🚶‍♂️ People Entry/Exit Counter")
+st.title("People Entry/Exit Counter")
 
-video_file = st.file_uploader("📄 Upload a video", type=["mp4", "avi", "mov"])
-run_button = st.button("▶️ Start Counting")
+video_file = st.file_uploader(" Upload a video", type=["mp4", "avi", "mov"])
+run_button = st.button(" Start Counting")
 FRAME_WINDOW = st.image([])
 
 # Init counters and memory
@@ -122,13 +122,13 @@ if video_file and run_button:
     cap.release()
 
     st.markdown(f"""
-        ### 📃 Final Counts  
+        ###  Final Counts  
         - Entry: `{entry_count}`  
         - Exit: `{exit_count}`
     """)
 
 # ========== View MongoDB Logs ==========
-with st.expander("📋 View MongoDB Logs"):
+with st.expander(" View MongoDB Logs"):
     client = MongoClient("mongodb://localhost:27017/")
     db = client['people_counter']
     collection = db['entries_exits']
