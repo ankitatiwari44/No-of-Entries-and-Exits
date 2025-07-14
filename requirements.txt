@@ -1,0 +1,6 @@
+streamlit
+ultralytics
+opencv-python
+deep_sort_realtime
+pymongo
+plyer

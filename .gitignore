@@ -1,0 +1,33 @@
+# Ignore YOLO model weights
+yolov8s.pt
+yolov8n.pt
+
+# Ignore Python virtual environments
+people/
+env/
+venv/
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.so
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Streamlit cache
+.streamlit/
+
+# VS Code and IDE settings
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and outputs
+*.log
+*.csv
+*.avi
+*.mp4
