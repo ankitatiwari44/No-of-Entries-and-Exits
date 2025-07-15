@@ -22,34 +22,9 @@ MongoDB	- Persistent logging of events
 Python - 	 code & logic implementation
 
 ## System Architecture
-Video Upload or Stream
-       ↓
-   Frame-by-frame
-       ↓
-+-------------------+
-| YOLOv8 detects    | → Bounding boxes for 'person'
-| people in frame   |
-+-------------------+
-       ↓
-+-------------------+
-| DeepSORT assigns  | → Unique IDs to track people
-| track_id to each  |
-| person            |
-+-------------------+
-       ↓
-Movement tracking →
-       ↓
-Cross center line? → Entry/Exit event
-       ↓
-+---------------------------+
-| Streamlit UI (Live Video)|
-| Display: Entry, Exit     |
-+---------------------------+
-       ↓
-+---------------------------+
-| MongoDB Logs              |
-| entry/exit with time, ID  |
-+---------------------------+
+<img width="532" height="687" alt="image" src="https://github.com/user-attachments/assets/fa9b60e6-ee02-4a03-9746-5d7c2f4d6734" />
+<img width="362" height="165" alt="image" src="https://github.com/user-attachments/assets/70a36414-5691-4afc-a838-991fe3203c25" />
+
 ## Logic
 Detect when a person enters or exits the room.
 Detect People:Using YOLOv8 object detection model, which identifies only persons (class 0).
